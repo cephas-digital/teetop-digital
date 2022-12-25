@@ -16,4 +16,5 @@ export const useURL =
 
 export const SetDefaultHeaders = () => {
 	axios.defaults.baseURL = useURL;
+	axios.defaults.headers.common["API_KEY"] = process.env.AGENT_API_KEY;
 };

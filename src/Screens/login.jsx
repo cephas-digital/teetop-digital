@@ -5,7 +5,11 @@ import { Buttons, EyeToggle } from "../Utils";
 import { DefaultAuthComponent } from "./register";
 
 const Login = () => {
-	const { loginUser, auth } = useContext(GlobalState);
+	const {
+		// loginUser,
+		auth,
+		getSetTempUser,
+	} = useContext(GlobalState);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -15,6 +19,7 @@ const Login = () => {
 		init = {
 			email: "",
 			password: "",
+			user: "user",
 		},
 		[stateData, setStateData] = useState(init),
 		[loading, setLoading] = useState(false),
@@ -28,9 +33,10 @@ const Login = () => {
 
 	let handleSubmit = async e => {
 		e.preventDefault();
-		if (!stateData?.password || !stateData?.email) return;
+		// if (!stateData?.password || !stateData?.email) return;
 		setLoading(true);
-		await loginUser(stateData);
+		getSetTempUser(stateData?.user);
+		// await loginUser(stateData);
 		setLoading(false);
 		setSubmit(true);
 	};
@@ -73,6 +79,18 @@ const Login = () => {
 						/>
 						<EyeToggle typePass={typePass} setTypePass={setTypePass} />
 					</div>
+					<div className="mb-3">
+						<label htmlFor="user">User</label>
+						<select
+							required
+							name="user"
+							className="form-control py-3 form-select"
+							value={stateData.user}
+							onChange={textChange("user")}>
+							<option value="user">User</option>
+							<option value="agent">Agent</option>
+						</select>
+					</div>
 					<p className="my-4 justify-content-end d-flex">
 						<Link
 							to={`/forget-password`}
@@ -80,6 +98,12 @@ const Login = () => {
 							Forgot Password?
 						</Link>{" "}
 					</p>
+					<Buttons
+						onClick={handleSubmit}
+						loading={loading}
+						title={"sign in"}
+						css="btn-primary1 text-capitalize py-3 w-100 my-4"
+					/>
 					<div className="d-flex py-5 flex-column">
 						<p className="text-center">Don't have an account?</p>
 						<Link
@@ -88,12 +112,6 @@ const Login = () => {
 							Create Account
 						</Link>{" "}
 					</div>
-					<Buttons
-						onClick={handleSubmit}
-						loading={loading}
-						title={"sign in"}
-						css="btn-primary1 text-capitalize py-3 w-100 my-4"
-					/>
 					<p className="text-center">
 						By continuing you accept our standard terms and conditions and our
 						privacy policy.

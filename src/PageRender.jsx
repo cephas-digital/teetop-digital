@@ -16,17 +16,34 @@ const generatePage = (pageName, folder) => {
 };
 
 const PageRender = () => {
-	const { auth } = useContext(GlobalState);
+	const { auth, errors } = useContext(GlobalState);
 	const { page, id, step } = useParams(),
-		navigate = useNavigate();
+		navigate = useNavigate(),
+		escapeUsers = ["agents"],
+		escape = ["add"],
+		escapeProducts = [
+			"airtime",
+			"data",
+			"tv-subscriptions",
+			"data-pin",
+			"electricity-bills",
+		],
+		escapeAdmin = ["admins", "employees", "billers"],
+		escapeWallet = ["bonus", "commissions"],
+		escapeControl = ["bills", "broadcasts", "tv-subscriptions"];
 
 	useEffect(() => {
-		if (auth.isAuth) {
+		if (auth?.temp_auth === "user" || auth?.temp_auth === "agent") {
 			if (page === "login" || page === "register") {
 				navigate("/");
 			}
 		}
-	}, [page, auth.isAuth, navigate]);
+		if (!auth?.isAuth) {
+			if (errors?.errorText?.includes("jwt")) {
+				navigate("/login");
+			}
+		}
+	}, [page, auth?.isAuth, navigate, errors?.errorText, auth?.temp_auth]);
 
 	if (auth.token && auth.isAuthLoading) return <Loader />;
 
@@ -34,12 +51,31 @@ const PageRender = () => {
 	if (step) {
 		pageName = `${page}/${id}/${"[id]"}`;
 	} else if (id) {
-		pageName = `${page}/[id]`;
+		if (page === "users" && escapeUsers.includes(id))
+			pageName = `${page}/${id}`;
+		else if (page === "products" && escapeProducts.includes(id))
+			pageName = `${page}/${id}`;
+		else if (page === "controls" && escapeControl.includes(id))
+			pageName = `${page}/${id}`;
+		else if (page === "administration" && escapeAdmin.includes(id))
+			pageName = `${page}/${id}`;
+		else if (page === "transactions" && escape.includes(id))
+			pageName = `${page}/${id}`;
+		else if (page === "wallets" && escapeWallet.includes(id))
+			pageName = `${page}/${id}`;
+		else pageName = `${page}/[id]`;
 	} else {
 		pageName = `${page}`;
 	}
 
-	return generatePage(pageName, auth?.isAuth ? "Pages" : "Screens");
+	return generatePage(
+		pageName,
+		auth?.temp_auth === "user"
+			? "Pages"
+			: auth?.temp_auth === "agent"
+			? "Views"
+			: "Screens"
+	);
 };
 
 export default PageRender;

@@ -1,3 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Lexend);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css?family=Inter);
+
 :root {
 	--light-blue: #3199b7;
 	--dark-blue: #144468;
@@ -8,13 +13,26 @@
 	--blue: #20afe5;
 	--deep-purple: #c20e9c;
 	--yellow: #edc666;
+	--dark-purple: #0e102d;
 
-	--gradieint1: linear-gradient(90deg, #de0de2 16.14%, #880ec2 101.45%);
-	--gradieint2: linear-gradient(90.18deg, #6cb731 -52.19%, #0f5a16 81.92%);
+	--gradient1: linear-gradient(90deg, #de0de2 16.14%, #880ec2 101.45%);
+	--gradient2: linear-gradient(90.18deg, #6cb731 -52.19%, #0f5a16 81.92%);
 	--gradient3: linear-gradient(90deg, #e43369 16.14%, #c20e19 101.45%);
 	--gradient4: linear-gradient(96.86deg, #53f293 18.88%, #9eff00 125.77%);
 	--gradient5: linear-gradient(90deg, #de0de2 16.14%, #0e102d 101.45%);
 	--gradient6: linear-gradient(90.18deg, #84c7db -52.19%, #377fb6 81.92%);
+	--gradient7: linear-gradient(112.36deg, #3199b7 15.41%, #d6e5e3 54.22%);
+	--gradient8: linear-gradient(
+		180.55deg,
+		#c6d1cf 0.47%,
+		rgba(114, 142, 137, 0) 125.34%
+	);
+	--gradient9: rgba(173, 155, 177, 0.4);
+	--dark: #323232;
+	--lilac: #AD9BB1;
+	--light-blue:#63B0C4;
+	--grey: #B9BBBC;
+	--deep-yellow: #FEC430
 
 	--trans-02: all 0.2s ease;
 	--trans-03: all 0.3s ease;
@@ -22,22 +40,41 @@
 	--trans-05: all 0.5s ease;
 
 	--shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+	--white: #fff;
+	--black: #000;
+}
+
+button,
+button:focus,
+input,
+input:focus,
+*:focus {
+	outline: none !important;
+	box-shadow: none !important;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0 !important;
+	box-shadow: none !important;
 }
 
 .shadow2 {
 	box-shadow: var(--shadow) !important;
 }
+.bland {
+	background: var(--bland);
+}
 
 ::-webkit-scrollbar {
-	width: 5px;
-	height: 6px;
+	width: 8px;
+	height: 8px;
 }
 ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px #a5aaad;
+	box-shadow: inset 0 0 5px var(--light-blue);
 	border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-	background: var(--dark-blue);
+	background: var(--light-blue);
 	border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -47,7 +84,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "Poppins";
+	font-family: "Nunito";
 	box-sizing: border-box;
 	font-size: 14px;
 }
@@ -57,6 +94,25 @@ body {
 
 .fontInherit {
 	font-size: inherit !important;
+}
+
+.Montserrat {
+	font-family: "Montserrat" !important;
+}
+.BebasNeue {
+	font-family: "Bebas Neue" !important;
+}
+.Lexend {
+	font-family: "Lexend" !important;
+}
+.Lato {
+	font-family: "Lato" !important;
+}
+.Inter {
+	font-family: "Inter" !important;
+}
+.B612 {
+	font-family: "B612" !important;
 }
 
 .headerActive,
@@ -102,12 +158,16 @@ body {
 	font-size: 55px;
 	font-weight: 600;
 }
+
+.text2 {
+	font-size: 25px;
+	font-weight: 400;
+}
 .fullscreen {
 	height: 85vh !important;
 }
 .aboutScreen {
 	min-height: 90vh !important;
-	height: 100% !important;
 }
 .minFullHeight {
 	min-height: 80vh !important;
@@ -146,7 +206,10 @@ body {
 	border-bottom-right-radius: 10px;
 }
 .rounded20 {
-	border-radius: 20px;
+	border-radius: 20px !important;
+}
+.rounded10 {
+	border-radius: 10px !important;
 }
 .productDiv {
 	border-bottom-left-radius: 10px;
@@ -227,6 +290,177 @@ body {
 	color: var(--dark-blue);
 }
 
+.userbar {
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3rem 2rem;
+	display: grid;
+	margin: 2rem auto;
+}
+.billerbar {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.userbar > div p {
+	font-weight: 400 !important;
+}
+.userbar > div, .productCard {
+	border-radius: 30px;
+	color: #fff;
+	font-weight: 400 !important;
+	text-transform: capitalize;
+	height: 182px !important;
+}
+
+.billerbar > div {
+	border-radius: 20px;
+	color: #111;
+	font-weight: 400 !important;
+	text-transform: capitalize;
+	height: 376px;
+}
+.userbar2 {
+	gap: 2rem 1rem;
+}
+.userbar2 > div {
+	height: 120px;
+	color: #fff;
+}
+.walletDiv{
+	background: var(--gradient7);
+	min-height: 336px;
+	height: 100%;
+	color: var(--bland2);
+}
+.darkBg{
+	background: var(--dark) !important;
+}
+.lilacBg{
+	background: var(--gradient8) !important;
+}
+.greyBg{
+	background: var(--gradient9) !important;
+}
+
+.genWalletWidth{
+	min-width: 220px;
+}
+.horizHover:hover{
+	transition: var(--trans-05);
+	background: #000;color: #fff;
+}
+.textGradient{
+	background: linear-gradient(90.18deg, #3199B7 -52.19%, #144468 81.92%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.userbar img {
+	object-fit: contain !important;
+}
+
+.textTrunc {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+}
+.textTrunc2 {
+	-webkit-line-clamp: 2;
+}
+.textTrunc3 {
+	-webkit-line-clamp: 3;
+}
+.textTrunc4 {
+	-webkit-line-clamp: 4;
+}
+.textTrunc5 {
+	-webkit-line-clamp: 5;
+}
+
+.loaded {
+	color: var(--gold);
+	background: rgba(252, 249, 187, 0.5);
+	top: 0;
+	left: 0;
+	z-index: 2000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+}
+
+.loaded svg {
+	font-size: 5px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	animation: text 1s ease-in-out infinite;
+}
+
+@keyframes text {
+	50% {
+		opacity: 0.1;
+	}
+}
+
+.loaded polygon {
+	stroke-dasharray: 22;
+	stroke-dashoffset: 1;
+	animation: dash 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
+		alternate-reverse;
+}
+
+@keyframes dash {
+	to {
+		stroke-dasharray: 234;
+	}
+}
+
+.darkPurple {
+	background: var(--dark-purple) !important;
+}
+
+.react-calendar button {
+	color: var(--bland) !important;
+}
+
+.react-calendar abbr {
+	text-decoration: none !important;
+}
+.react-calendar .react-calendar__month-view__weekdays__weekday--weekend,
+.react-calendar
+	.react-calendar__month-view__days
+	> button.react-calendar__month-view__days__day--weekend {
+	color: var(--blue) !important;
+}
+.react-calendar button:hover,
+.react-calendar__tile--now,
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+	background: #222 !important;
+}
+
+.file_upload {
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+}
+.file_upload #file {
+	top: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	opacity: 0;
+}
+
+.CgWallet {
+	height: 10rem;
+}
+.defaultHead{
+	height: 7rem !important;
+}
+
 @media screen and (width <= 767.99px) {
 	.footerDiv,
 	.product-service {
@@ -234,6 +468,9 @@ body {
 	}
 	.fontReduce {
 		font-size: 12px;
+	}
+	.CgWallet{
+		height: 9rem !important;
 	}
 	.blogGrid {
 		grid-template-columns: repeat(1, 1fr);
@@ -246,6 +483,30 @@ body {
 	}
 	.product-service .abs1 {
 		width: 98%;
+	}
+.productCard{
+	height: 90px !important;
+}
+	.fontReduceBig {
+		font-size: 14px !important;
+	}
+	.fontReduceMini {
+		font-size: 13px !important;
+	}
+	.fontReduce2 {
+		font-size: 11px !important;
+	}
+	.fontReduce3 {
+		font-size: 10px !important;
+	}
+	.fontReduce4 {
+		font-size: 9px !important;
+	}
+	.fontReduce5 {
+		font-size: 8px !important;
+	}
+	.defaultHead{
+		height: 5rem !important;
 	}
 }
 
