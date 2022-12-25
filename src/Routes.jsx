@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import { Header, Sidebar, DefaultHeader } from "./Components";
+import { Header, Sidebar, DefaultHeader, Footer } from "./Components";
 import { GlobalState } from "./Data/Context";
 import PageRender from "./PageRender";
 import Home from "./Screens/home";
@@ -47,6 +47,11 @@ const Routers = () => {
 					<Route path="/:page/:id/:step" element={<PageRender />} />
 				</Routes>
 			</div>
+			{auth?.temp_auth === "user" || auth?.temp_auth === "agent" ? (
+				<></>
+			) : (
+				<Footer />
+			)}
 		</>
 	);
 };
