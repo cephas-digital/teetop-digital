@@ -141,9 +141,9 @@ export const ProductServices = () => {
   ];
   return (
     <Container>
-      <div className="d-grid product-service pb-5">
+      <div className=" product-service  pb-5">
         {type?.map((item, i) => (
-          <div className="position-relative eachProduct" key={i}>
+          <div className="position-relative my-3 eachProduct" key={i}>
             {i % 2 !== 0 && (
               <>
                 <div className="abs1" />
