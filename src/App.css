@@ -5,8 +5,9 @@
 
 :root {
 	--light-blue: #3199b7;
-	--dark-blue: #144468;
-	--main-gradient: linear-gradient(90.18deg, #3199b7 -52.19%, #144468 81.92%);
+	--dark-blue: #01579b;
+	--main-gradient: linear-gradient(90.18deg, #00eaff -52.19%, #3c8ce7 81.92%);
+	/* --main-gradient: linear-gradient(90.18deg, #3199b7 -52.19%, #144468 81.92%); */
 	--bland: #d6ebf1;
 	--bland2: #f6f8ff;
 	--purple: #7f61ed;
@@ -14,6 +15,10 @@
 	--deep-purple: #c20e9c;
 	--yellow: #edc666;
 	--dark-purple: #0e102d;
+	--logo-color1 : #ffb300;
+	--logo-color2 : #01579b;
+	/* --dark-color2 : #01579b; */
+	--dark-yellow : #ffc107;
 
 	--gradient1: linear-gradient(90deg, #de0de2 16.14%, #880ec2 101.45%);
 	--gradient2: linear-gradient(90.18deg, #6cb731 -52.19%, #0f5a16 81.92%);
@@ -44,6 +49,18 @@
 	--black: #000;
 }
 
+.site-secondary-color {
+	color : var(--logo-color1);
+}
+.site-primary-color {
+	color : var(--logo-color2);
+}
+
+.about_text {
+
+	font-size : 4rem;
+	font-weight : 900;
+}
 button,
 button:focus,
 input,
@@ -190,13 +207,14 @@ body {
 	gap: 3rem 2rem;
 }
 .product-service2 {
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 3rem 2rem;
 }
 .product-service .abs1 {
-	height: 100%;
+	height: 101%;
 	width: 101%;
 	background: var(--dark-blue);
+
 	-webkit-transform: rotate(2deg);
 	-ms-transform: rotate(2deg);
 	transform: rotate(2deg);
@@ -214,7 +232,7 @@ body {
 .productDiv {
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	background: #fafbff;
+	background: whitesmoke;
 }
 .productDiv p,
 .blogGrid p {
@@ -251,7 +269,7 @@ body {
 }
 
 .eachProduct:hover {
-	transform: scale(0.9);
+	transform: translateY(2rem) scale(0.9);
 }
 
 .emptyData {

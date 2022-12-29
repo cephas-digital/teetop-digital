@@ -11,11 +11,11 @@ import AirtimeReducer from "./AirtimeReducer";
 import ErrorReducer from "./ErrorReducer";
 
 export default combineReducers({
-	auth: AuthReducer,
-	cables: CableReducer,
-	data: DataReducer,
-	general: NetworkPlanReducer,
-	electricity: ElectricityReducer,
-	airtimes: AirtimeReducer,
-	errors: ErrorReducer,
+  auth: AuthReducer,
+  cables: CableReducer,
+  data: DataReducer,
+  general: NetworkPlanReducer,
+  electricity: ElectricityReducer,
+  airtimes: AirtimeReducer,
+  errors: ErrorReducer,
 });
