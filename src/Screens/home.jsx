@@ -120,7 +120,7 @@ export const ProductServices = () => {
   let type = [
     {
       name: "data Services",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis.`,
+      description: `kemtech enterprises is reliable and affordable platform to buy cheap data bundles and Airtime topup of any Nigerian network. We offer the best price rates for Airtel, MTN, 9mobile and Glo data plans.`,
     },
     {
       name: "Airtime Services",
@@ -128,7 +128,7 @@ export const ProductServices = () => {
     },
     {
       name: "Cable Subscription",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis.`,
+      description: `Save money by renewing your DSTV, GOTV and Startimes subscriptions at discounted rates. You don't have to visit PHCN offices to pay for your Electricity bills as you can pay them online through Speedydata from the comfort of your home.`,
     },
     {
       name: "WAEC/NECO scratch cards",
@@ -136,11 +136,11 @@ export const ProductServices = () => {
     },
     {
       name: " Swiftest Delivery   ",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis.`,
+      description: `Enjoy prompt delivery of services purchased through KemTech Enterprises. Our promise to you is to deliver value for every transaction made on-time, every time.`,
     },
     {
       name: "good customer care service",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis.`,
+      description: `Our well trained customer support agents are always available 24/7 to help you resolve any issues. We provide you with multiple ways to reach us and get fast help.`,
     },
   ];
   return (
@@ -335,10 +335,13 @@ const CustomerHeader = () => {
         <MiddleHeader text={"Hear our customers speak"} />
         <div className="d-flex justify-content-center">
           <p className="text-center w-50 w50 fontReduce">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque in
-            commodi sapiente veniam magni consequatur saepe incidunt! Commodi
-            laborum, a et dolorem ut est possimus adipisci alias asperiores,
-            amet quis!
+            Ever since i started business with KemTech Enterprises it has been
+            all smiles...they have the best customer service team ever...prompt
+            and fast response to issues and if it's something they can't handle
+            personally they directit to necessary person(s) to handle...am here
+            to stay and no going back...infact i have 2 friends i brought into
+            the system and it has all been smiles for them too...kemtech
+            enterprises thanks for always being true.
           </p>
         </div>
       </section>

@@ -109,7 +109,7 @@ const Header = () => {
               onClick={() => (isOpen ? setIsOpen(false) : null)}
               className="text-decoration-none btn btn-primary1 text-capitalize px-4 py-3 hug"
             >
-              Get in touch
+              Register
             </Link>
           </NavItem>
         </div>
