@@ -14,19 +14,9 @@ const ServicesManagement = () => {
 					<div
 						className="py-md-5 py-3 pt-0 d-flex flex-column"
 						data-aos="fade-right">
+							<h1 className="display-5">How can we help?</h1>
 						<p data-aos="zoom-in" data-aos-delay="1000" className="fontReduce">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sit
-							earum delectus omnis laboriosam quae ratione dolorem cumque
-							pariatur neque dignissimos aut odit incidunt, placeat officia
-							eaque quasi corporis et! Hic quo provident quaerat accusamus
-							soluta veniam quasi repellat minus itaque ratione, optio ex magnam
-							in dolores iure dicta. Ipsum inventore ducimus blanditiis quas
-							expedita repellendus! Consequatur sapiente laudantium optio,
-							expedita dolor obcaecati praesentium necessitatibus eos illo a
-							facere suscipit quisquam alias dolorem, sunt doloremque
-							dignissimos blanditiis iste, sit earum distinctio culpa architecto
-							voluptas. Sunt aliquid voluptate eos itaque repudiandae, eum est.
-							Repellendus molestias, est nemo dolorum iure dignissimos. Dolorum.
+						We're here to help and answer any question you might have.<br/> we look forward to hearing from you.
 						</p>
 						<ul className="list-group border-0 list-group-horizontal">
 							{socials.map((item, index) => (

@@ -105,10 +105,7 @@ const WhatWeDo = () => {
         <MiddleHeader text={"Services We Render"} />
         <div className="d-flex justify-content-center">
           <p className="text-center w-50 w50 fontReduce">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque in
-            commodi sapiente veniam magni consequatur saepe incidunt! Commodi
-            laborum, a et dolorem ut est possimus adipisci alias asperiores,
-            amet quis!
+         Enjoy  Your data and airtime purchases with the best selling discount and Get Your Cable subscriptions in a moment and more...
           </p>
         </div>
       </section>
@@ -124,15 +121,14 @@ export const ProductServices = () => {
     },
     {
       name: "Airtime Services",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis.`,
-    },
+      description: `Kemtech enterprises provide with an Easy topup of airtime, Low charges rates and quick to recharge serives`},
     {
       name: "Cable Subscription",
-      description: `Save money by renewing your DSTV, GOTV and Startimes subscriptions at discounted rates. You don't have to visit PHCN offices to pay for your Electricity bills as you can pay them online through Speedydata from the comfort of your home.`,
+      description: `Save money by renewing your DSTV, GOTV and Startimes subscriptions at discounted rates with Kemtech Enterprises. We provide easy access to cable subscrition saving you the time to go all around.`,
     },
     {
       name: "WAEC/NECO scratch cards",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis.`,
+      description: `Your one-stop shop for all kinds of Examination Scratch Cards. We are your surest plug for Genuine Waec, Neco and Nabteb Scratch Cards. Your happiness is our delight. We take pride in delivering world-class service, and we are very confident that after your first experience using our service, you'd make our website your Homepage.`,
     },
     {
       name: " Swiftest Delivery   ",
@@ -153,7 +149,7 @@ export const ProductServices = () => {
                 <div className="abs1" />
               </>
             )}
-            <div className="p-3 productDiv pb-5">
+            <div className="p-3 productDiv pb-1 ">
               <strong className="text-end d-block">
                 {i <= 10 ? "0" : ""}
                 {i + 1}
@@ -205,10 +201,8 @@ const SupportHeader = () => {
         <MiddleHeader text={"Our Support Channels"} />
         <div className="d-flex justify-content-center">
           <p className="text-center w-50 w50 fontReduce">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque in
-            commodi sapiente veniam magni consequatur saepe incidunt! Commodi
-            laborum, a et dolorem ut est possimus adipisci alias asperiores,
-            amet quis!
+       
+    Our well trained customer support agents are always available 24/7 to help you resolve any issues. We provide you with multiple ways to reach us and get fast help.
           </p>
         </div>
       </section>
@@ -224,7 +218,7 @@ export const SuportChannels = () => {
     //   image: imgDown1,
     // },
     {
-      name: "Send Unlimited Tickets",
+      name: "Chat Us On Facebook",
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis.`,
       image: imgDown2,
     },
@@ -234,7 +228,7 @@ export const SuportChannels = () => {
       image: imgDown3,
     },
     {
-      name: "Connect on Slack",
+      name: "Send Us Mail",
       description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gravida vitae lacus, in porta. Faucibus porttitor commodo volutpat in tincidunt bibendum. Adipiscing amet sem eget mauris ultricies porttitor quis.`,
       image: imgDown4,
     },
@@ -246,7 +240,7 @@ export const SuportChannels = () => {
           <div className="" key={i}>
             <div className="p-3 productDiv py-5 px-4">
               <h4 className="text-capitalize mb-4">{item?.name}</h4>
-              <p className="pb-3 fontReduce">{item?.description}</p>
+              {/* <p className="pb-3 fontReduce">{item?.description}</p> */}
               <Link
                 to={"/login"}
                 className="text-decoration-none btn btn-primary1 text-capitalize px-4 py-3 hug"
@@ -274,10 +268,9 @@ export const GainHeader = () => {
         <MiddleHeader text={"What you stand to gain with us"} />
         <div className="d-flex justify-content-center">
           <p className="text-center w-50 w50 fontReduce">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque in
-            commodi sapiente veniam magni consequatur saepe incidunt! Commodi
-            laborum, a et dolorem ut est possimus adipisci alias asperiores,
-            amet quis!
+          With KemTech Enterprises, You will enjoy a fast data delivery with Optimal security and also enjoy the best offers and discount sales on all our products periodically
+
+
           </p>
         </div>
       </section>
@@ -337,10 +330,7 @@ const CustomerHeader = () => {
           <p className="text-center w-50 w50 fontReduce">
             Ever since i started business with KemTech Enterprises it has been
             all smiles...they have the best customer service team ever...prompt
-            and fast response to issues and if it's something they can't handle
-            personally they directit to necessary person(s) to handle...am here
-            to stay and no going back...infact i have 2 friends i brought into
-            the system and it has all been smiles for them too...kemtech
+            and fast response to issues. kemtech
             enterprises thanks for always being true.
           </p>
         </div>

@@ -19,19 +19,8 @@ const Services = () => {
               What we can do{" "}
               <span className="textColor2 fontInherit">for you</span>
             </h2>
-            <p data-aos="zoom-in" data-aos-delay="1000" className="fontReduce">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sit
-              earum delectus omnis laboriosam quae ratione dolorem cumque
-              pariatur neque dignissimos aut odit incidunt, placeat officia
-              eaque quasi corporis et! Hic quo provident quaerat accusamus
-              soluta veniam quasi repellat minus itaque ratione, optio ex magnam
-              in dolores iure dicta. Ipsum inventore ducimus blanditiis quas
-              expedita repellendus! Consequatur sapiente laudantium optio,
-              expedita dolor obcaecati praesentium necessitatibus eos illo a
-              facere suscipit quisquam alias dolorem, sunt doloremque
-              dignissimos blanditiis iste, sit earum distinctio culpa architecto
-              voluptas. Sunt aliquid voluptate eos itaque repudiandae, eum est.
-              Repellendus molestias, est nemo dolorum iure dignissimos. Dolorum.
+            <p data-aos="zoom-in" data-aos-delay="1000" className="fontReduce  ">
+            Yes, we got you covered,    With KemTech Enterprises Enjoy a easy and fast data delivery with Optimal security and also enjoy the best offers and discount sales on all our products periodically.
             </p>
           </div>
           <img

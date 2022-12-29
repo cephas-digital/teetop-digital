@@ -30,18 +30,7 @@ const About = () => {
           <div className="py-5 d-flex flex-column">
             <h2 className="textColor mb-3">About us</h2>
             <p data-aos="zoom-in" data-aos-delay="1000" className="fontReduce">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sit
-              earum delectus omnis laboriosam quae ratione dolorem cumque
-              pariatur neque dignissimos aut odit incidunt, placeat officia
-              eaque quasi corporis et! Hic quo provident quaerat accusamus
-              soluta veniam quasi repellat minus itaque ratione, optio ex magnam
-              in dolores iure dicta. Ipsum inventore ducimus blanditiis quas
-              expedita repellendus! Consequatur sapiente laudantium optio,
-              expedita dolor obcaecati praesentium necessitatibus eos illo a
-              facere suscipit quisquam alias dolorem, sunt doloremque
-              dignissimos blanditiis iste, sit earum distinctio culpa architecto
-              voluptas. Sunt aliquid voluptate eos itaque repudiandae, eum est.
-              Repellendus molestias, est nemo dolorum iure dignissimos. Dolorum.
+              KemTech Enterprises is a platform where you can have easy access to data and airtime purchases, A reliable platform for Cable and Waec/Neco Subscriptions and also we provide with an easy topup of airtime, Low charges rates and quick to recharge serives Enjoy prompt delivery of services purchased through KemTech Enterprises. Our promise to you is to deliver value for every transaction made on-time and every time.
             </p>
           </div>
         </div>

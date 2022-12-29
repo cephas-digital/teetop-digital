@@ -34,7 +34,7 @@ export let details = [
   { icon: <FaPhone />, text: "+2349020304941", type: "tel" },
   {
     icon: <FaEnvelopeSquare />,
-    text: "support@kemtech.com.ng",
+    text: "kemtech@gmail.com",
     type: "mail",
   },
   {
@@ -162,7 +162,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="pt-4 pt-md-0">
+          <div className="pt-4 d-none pt-md-0">
             <h5>Socials</h5>
             <ul className="list-group border-0 list-group-horizontal">
               {socials.map((item, index) => (

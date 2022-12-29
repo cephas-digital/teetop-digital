@@ -99,7 +99,7 @@ const Login = () => {
 						</Link>{" "}
 					</p>
 					<Buttons
-						onClick={handleSubmit}
+						// onClick={handleSubmit}
 						loading={loading}
 						title={"sign in"}
 						css="btn-primary1 text-capitalize py-3 w-100 my-4"

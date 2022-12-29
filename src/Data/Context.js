@@ -39,10 +39,10 @@ const DataProvider = ({ children, getSetTempUser }) => {
 			name: "Contact us",
 			url: "/contact",
 		},
-		{
-			name: "Our blog",
-			url: "/blogs",
-		},
+		// {
+		// 	name: "Our blog",
+		// 	url: "/blogs",
+		// },
 	];
 
 	let sidebarList = [

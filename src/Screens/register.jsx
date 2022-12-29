@@ -159,10 +159,10 @@ export const DefaultAuthComponent = ({ children }) => {
 					<span
 						to="/"
 						className="text-decoration-none text-dark d-flex align-items-center mb-4">
-						<img src={logo} alt="Honourworld" className="logo me-1" />
+						{/* <img src={logo} alt="Honourworld" className="logo me-1" /> */}
 						<div className="d-none d-md-block">
-							<p className="text-capitalize m-0">Honour world</p>
-							<p className="text-capitalize m-0">limited</p>
+							<p className="text-capitalize site-primary-color m-0">KemTech</p>
+							<p className="text-capitalize site-secondary-color m-0">Enterprises</p>
 						</div>
 					</span>
 					{children}

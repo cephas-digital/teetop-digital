@@ -203,12 +203,15 @@ body {
 }
 
 .product-service {
-	grid-template-columns: repeat(3, 1fr);
-	gap: 3rem 2rem;
+	grid-template-columns: repeat(3, 1fr) !important;
+	grid-auto-rows: 1fr !important;
+	gap: 3rem 2rem 	;
 }
 .product-service2 {
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 1fr) !important ;
+	grid-auto-rows: 1fr !important;
 	gap: 3rem 2rem;
+	/* margin-bottom: 3rem; */
 }
 .product-service .abs1 {
 	height: 101%;
@@ -245,7 +248,7 @@ body {
 
 .footerDiv {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	gap: 1rem;
 }
 .blogGrid {
@@ -266,14 +269,16 @@ body {
 .eachProduct {
 	transition: var(--trans-05);
 	cursor: pointer;
+	background-color: whitesmoke;
+	/* height: 25rem; */
 }
 
 .eachProduct:hover {
-	transform: translateY(2rem) scale(0.9);
+	transform:  scale(0.9);
 }
 
 .emptyData {
-	max-height: 50vh;
+	/* max-height: 10vh; */
 }
 
 .otp-code__input {
