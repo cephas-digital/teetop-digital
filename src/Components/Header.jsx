@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import { GlobalState } from "../Data/Context";
 import { Navbar, Collapse, Nav, NavItem } from "reactstrap";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/teetop1 (2).png";
 import { FaTimes, FaBars } from "react-icons/fa";
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
 
   useEffect(() => {
     document.title = CapitalizeFirst(
-      `Honourworld ${location.pathname.split("/").join(" ").substring(1)}`
+      `teetop digital ${location.pathname.split("/").join(" ").substring(1)}`
     );
   }, [location.pathname]);
 
@@ -55,13 +55,11 @@ const Header = () => {
         to="/"
         className="text-decoration-none text-dark d-flex align-items-center"
       >
-        {/* <img src={logo} alt="Honourworld" className="logo me-1" /> */}
-        <div className="d-block">
-          <p className="text-capitalize site-primary-color m-0">KEMTECH</p>
-          <p className="text-capitalize site-secondary-color ml-4">
-            ENTERPRISES
-          </p>
-        </div>
+        <img src={logo} alt="Honourworld" className="logo me-1 logo-img-size" />
+        {/* <div className="d-block">
+          <p className="text-capitalize site-primary-color m-0">teetop</p>
+          <p className="text-capitalize site-secondary-color ml-4">digital</p>
+        </div> */}
       </Link>
       {isOpen ? (
         <FaTimes

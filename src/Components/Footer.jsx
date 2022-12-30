@@ -1,5 +1,5 @@
 import React from "react";
-import logoLight from "../Assets/logo.png";
+import logoLight from "../Assets/teetop1.png";
 import { Link } from "react-router-dom";
 import {
   FaPhone,
@@ -34,12 +34,12 @@ export let details = [
   { icon: <FaPhone />, text: "+2349020304941", type: "tel" },
   {
     icon: <FaEnvelopeSquare />,
-    text: "kemtech@gmail.com",
+    text: "elusakinyomi@gmail.com",
     type: "mail",
   },
   {
     icon: <FaMapMarker />,
-    text: "Kemtech Entrprrises",
+    text: "teetop Entrprrises",
     type: "address",
   },
 ];
@@ -68,13 +68,13 @@ const Footer = () => {
               to="/"
               className="text-decoration-none text-white d-flex align-items-center mb-5"
             >
-              {/* <img src={logoLight} alt="Honourworld" className="logo me-1" /> */}
-              <div className="">
-                <p className="text-capitalize m-0 text-light">Kemtech</p>
+              <img src={logoLight} alt="Honourworld" className="logo me-1 logo-img-size" />
+              {/* <div className="">
+                <p className="text-capitalize m-0 text-light">teetop</p>
                 <p className="text-capitalize m-0 site-secondary-color">
-                  Enterprises
+                  digital
                 </p>
-              </div>
+              </div> */}
             </Link>
             {/* <div className="d-none d-md-block fontReduce">
 							We are the #MOVEMENT People Your Trusted Logistics Aggregator
@@ -190,8 +190,7 @@ const Footer = () => {
               &copy; {`${new Date().getFullYear() !== 2022 ? "2022 - " : ""}`}
               {new Date().getFullYear()}
             </span>
-            &nbsp;{" "}
-            <span className="d-block d-lg-inline">kemtech Enterprise</span>
+            &nbsp; <span className="d-block d-lg-inline">TEETOP DIGITAL</span>
           </p>
         </div>
       </div>

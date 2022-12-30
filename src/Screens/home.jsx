@@ -105,7 +105,8 @@ const WhatWeDo = () => {
         <MiddleHeader text={"Services We Render"} />
         <div className="d-flex justify-content-center">
           <p className="text-center w-50 w50 fontReduce">
-         Enjoy  Your data and airtime purchases with the best selling discount and Get Your Cable subscriptions in a moment and more...
+            Enjoy Your data and airtime purchases with the best selling discount
+            and Get Your Cable subscriptions in a moment and more...
           </p>
         </div>
       </section>
@@ -117,14 +118,15 @@ export const ProductServices = () => {
   let type = [
     {
       name: "data Services",
-      description: `kemtech enterprises is reliable and affordable platform to buy cheap data bundles and Airtime topup of any Nigerian network. We offer the best price rates for Airtel, MTN, 9mobile and Glo data plans.`,
+      description: `TEETOP DIGITALs is reliable and affordable platform to buy cheap data bundles and Airtime topup of any Nigerian network. We offer the best price rates for Airtel, MTN, 9mobile and Glo data plans.`,
     },
     {
       name: "Airtime Services",
-      description: `Kemtech enterprises provide with an Easy topup of airtime, Low charges rates and quick to recharge serives`},
+      description: `TEETOP DIGITALs provide with an Easy topup of airtime, Low charges rates and quick to recharge serives`,
+    },
     {
       name: "Cable Subscription",
-      description: `Save money by renewing your DSTV, GOTV and Startimes subscriptions at discounted rates with Kemtech Enterprises. We provide easy access to cable subscrition saving you the time to go all around.`,
+      description: `Save money by renewing your DSTV, GOTV and Startimes subscriptions at discounted rates with TEETOP DIGITALs. We provide easy access to cable subscrition saving you the time to go all around.`,
     },
     {
       name: "WAEC/NECO scratch cards",
@@ -132,7 +134,7 @@ export const ProductServices = () => {
     },
     {
       name: " Swiftest Delivery   ",
-      description: `Enjoy prompt delivery of services purchased through KemTech Enterprises. Our promise to you is to deliver value for every transaction made on-time, every time.`,
+      description: `Enjoy prompt delivery of services purchased through TEETOP DIGITALs. Our promise to you is to deliver value for every transaction made on-time, every time.`,
     },
     {
       name: "good customer care service",
@@ -201,8 +203,9 @@ const SupportHeader = () => {
         <MiddleHeader text={"Our Support Channels"} />
         <div className="d-flex justify-content-center">
           <p className="text-center w-50 w50 fontReduce">
-       
-    Our well trained customer support agents are always available 24/7 to help you resolve any issues. We provide you with multiple ways to reach us and get fast help.
+            Our well trained customer support agents are always available 24/7
+            to help you resolve any issues. We provide you with multiple ways to
+            reach us and get fast help.
           </p>
         </div>
       </section>
@@ -268,9 +271,9 @@ export const GainHeader = () => {
         <MiddleHeader text={"What you stand to gain with us"} />
         <div className="d-flex justify-content-center">
           <p className="text-center w-50 w50 fontReduce">
-          With KemTech Enterprises, You will enjoy a fast data delivery with Optimal security and also enjoy the best offers and discount sales on all our products periodically
-
-
+            With TEETOP DIGITALs, You will enjoy a fast data delivery with
+            Optimal security and also enjoy the best offers and discount sales
+            on all our products periodically
           </p>
         </div>
       </section>
@@ -328,10 +331,10 @@ const CustomerHeader = () => {
         <MiddleHeader text={"Hear our customers speak"} />
         <div className="d-flex justify-content-center">
           <p className="text-center w-50 w50 fontReduce">
-            Ever since i started business with KemTech Enterprises it has been
-            all smiles...they have the best customer service team ever...prompt
-            and fast response to issues. kemtech
-            enterprises thanks for always being true.
+            Ever since i started business with TEETOP DIGITALs it has been all
+            smiles...they have the best customer service team ever...prompt and
+            fast response to issues. teetop digital thanks for always being
+            true.
           </p>
         </div>
       </section>

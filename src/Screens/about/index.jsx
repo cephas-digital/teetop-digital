@@ -19,18 +19,24 @@ const About = () => {
             data-aos="fade-right"
             className="d-flex align-items-center flex-column justify-content-center"
           >
-          <img
-            src={aboutImg}
-            alt="Bg"
-            className="img-fluild rounded w-100 h-100 aboutImg"
-            data-aos="fade-right"
-          />
+            <img
+              src={aboutImg}
+              alt="Bg"
+              className="img-fluild rounded w-100 h-100 aboutImg"
+              data-aos="fade-right"
+            />
           </div>
-        
+
           <div className="py-5 d-flex flex-column">
             <h2 className="textColor mb-3">About us</h2>
             <p data-aos="zoom-in" data-aos-delay="1000" className="fontReduce">
-              KemTech Enterprises is a platform where you can have easy access to data and airtime purchases, A reliable platform for Cable and Waec/Neco Subscriptions and also we provide with an easy topup of airtime, Low charges rates and quick to recharge serives Enjoy prompt delivery of services purchased through KemTech Enterprises. Our promise to you is to deliver value for every transaction made on-time and every time.
+              TEETOP DIGITALs is a platform where you can have easy access to
+              data and airtime purchases, A reliable platform for Cable and
+              Waec/Neco Subscriptions and also we provide with an easy topup of
+              airtime, Low charges rates and quick to recharge serives Enjoy
+              prompt delivery of services purchased through TEETOP DIGITALs. Our
+              promise to you is to deliver value for every transaction made
+              on-time and every time.
             </p>
           </div>
         </div>
