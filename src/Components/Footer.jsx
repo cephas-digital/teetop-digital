@@ -14,19 +14,19 @@ import {
 export let socials = [
   {
     icon: <FaWhatsapp size={24} />,
-    url: "https://wa.me/message/QNHCJYN6TSZGG1",
+    // url: "https://wa.me/message/QNHCJYN6TSZGG1",
   },
   {
     icon: <FaInstagramSquare size={24} />,
-    url: "https://instagram.com/honourworld?igshid=YmMyMTA2M2Y=",
+    // url: "https://instagram.com/honourworld?igshid=YmMyMTA2M2Y=",
   },
   {
     icon: <FaFacebook size={24} />,
-    url: "https://www.facebook.com/profile.php?id=100077522783530",
+    // url: "https://www.facebook.com/profile.php?id=100077522783530",
   },
   {
     icon: <FaTwitter size={24} />,
-    url: "https://twitter.com/Honourworld?t=WwN0_bwU-xC_1Qr0PlIc9A&s=09",
+    // url: "https://twitter.com/Honourworld?t=WwN0_bwU-xC_1Qr0PlIc9A&s=09",
   },
 ];
 
@@ -162,7 +162,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="pt-4 d-none pt-md-0">
+          <div className="pt-4  pt-md-0">
             <h5>Socials</h5>
             <ul className="list-group border-0 list-group-horizontal">
               {socials.map((item, index) => (

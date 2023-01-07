@@ -67,9 +67,7 @@ const HeroBanner = () => {
               >
                 In a few clicks, buy data to keep surfing the internet. You can
                 buy whatever size of data plan for whichever network you desire.
-                In a few clicks, buy data to keep surfing the internet. You can
-                buy whatever size of data plan for whichever network you desire.
-                Get Started
+        
               </p>
               <div className="d-flex p-2 w-75">
                 <Link
@@ -114,31 +112,44 @@ const WhatWeDo = () => {
   );
 };
 
+
+
+
+
+
+
+// Discounts & Bonuses
+// Periodically, Kemtech Enterprises offers the best discounts and special deals on all of our services, including data, airtime, and cable subscriptions. Stay tuned for updates on our special offers and take advantage of the opportunity to save on these services.
+
+
+
+
 export const ProductServices = () => {
   let type = [
     {
       name: "data Services",
-      description: `TEETOP DIGITALs is reliable and affordable platform to buy cheap data bundles and Airtime topup of any Nigerian network. We offer the best price rates for Airtel, MTN, 9mobile and Glo data plans.`,
+      description: `TEETOP DIGITAL is a reliable and affordable platform for purchasing affordable data bundles and airtime top-ups for any Nigerian network. We offer competitive pricing for data plans from Airtel, MTN, 9mobile, and Glo.`,
     },
     {
       name: "Airtime Services",
-      description: `TEETOP DIGITALs provide with an Easy topup of airtime, Low charges rates and quick to recharge serives`,
+      description: `TEETOP DIGITAL offers convenient and rapid airtime top-up services at competitive rates. Our low charges and quick recharge services make it easy for customers to top up their airtime.
+      `,
     },
     {
       name: "Cable Subscription",
-      description: `Save money by renewing your DSTV, GOTV and Startimes subscriptions at discounted rates with TEETOP DIGITALs. We provide easy access to cable subscrition saving you the time to go all around.`,
+      description: `At TEETOP DIGITAL, we offer discounted rates for renewing your DSTV, GOTV, and Startimes subscriptions, allowing you to save money on your cable service. Our convenient access to subscription renewal saves you time and effort in obtaining your cable service.`,
     },
     {
       name: "WAEC/NECO scratch cards",
-      description: `Your one-stop shop for all kinds of Examination Scratch Cards. We are your surest plug for Genuine Waec, Neco and Nabteb Scratch Cards. Your happiness is our delight. We take pride in delivering world-class service, and we are very confident that after your first experience using our service, you'd make our website your Homepage.`,
+      description: `TEETOP DIGITAL is your go-to source for various examination scratch cards, including those for Waec, Neco, and Nabteb. We take pride in providing top-quality service and aim to make our website your go-to destination after your first experience with us. Our priority is your satisfaction.`,
     },
     {
       name: " Swiftest Delivery   ",
-      description: `Enjoy prompt delivery of services purchased through TEETOP DIGITALs. Our promise to you is to deliver value for every transaction made on-time, every time.`,
+      description: `At TEETOP DIGITAL, we are committed to providing prompt delivery of all services purchased through our platform. We promise to deliver value for every transaction in a timely manner, ensuring that you receive the services you need in a timely and efficient manner.`,
     },
     {
       name: "good customer care service",
-      description: `Our well trained customer support agents are always available 24/7 to help you resolve any issues. We provide you with multiple ways to reach us and get fast help.`,
+      description: `TEETOP DIGITAL  has a team of well-trained customer support agents available 24/7 to assist you with any issues you may have. We offer multiple channels of communication to ensure that you can easily reach us and receive prompt assistance.`,
     },
   ];
   return (

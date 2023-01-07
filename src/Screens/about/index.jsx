@@ -30,13 +30,7 @@ const About = () => {
           <div className="py-5 d-flex flex-column">
             <h2 className="textColor mb-3">About us</h2>
             <p data-aos="zoom-in" data-aos-delay="1000" className="fontReduce">
-              TEETOP DIGITALs is a platform where you can have easy access to
-              data and airtime purchases, A reliable platform for Cable and
-              Waec/Neco Subscriptions and also we provide with an easy topup of
-              airtime, Low charges rates and quick to recharge serives Enjoy
-              prompt delivery of services purchased through TEETOP DIGITALs. Our
-              promise to you is to deliver value for every transaction made
-              on-time and every time.
+            Teetop Enterprises, is a convenient platform for purchasing data and airtime, as well as obtaining cable and Waec/Neco subscriptions. We offer easy and rapid airtime top-up services at competitive rates, and we are committed to delivering prompt and timely service for all transactions. Our well-trained customer support team is available 24/7 to assist you with any issues or questions you may have. We strive to provide the best value for every transaction and make it easy for you to access the services you need.
             </p>
           </div>
         </div>

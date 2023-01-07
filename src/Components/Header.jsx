@@ -46,7 +46,7 @@ const Header = () => {
     <Navbar
       expand="lg"
       sticky="top"
-      className={`container-fluid px-3 px-lg-5 header bg-white headerScroll py-4 w-100 ${
+      className={`container-fluid px-3 px-lg-5 header bg-white headerScroll py-2 py-lg-4 w-100 ${
         isShadow ? "shadow" : ""
       }`}
       light
@@ -55,11 +55,8 @@ const Header = () => {
         to="/"
         className="text-decoration-none text-dark d-flex align-items-center"
       >
-        <img src={logo} alt="Honourworld" className="logo me-1 logo-img-size" />
-        {/* <div className="d-block">
-          <p className="text-capitalize site-primary-color m-0">teetop</p>
-          <p className="text-capitalize site-secondary-color ml-4">digital</p>
-        </div> */}
+        <img src={logo} alt="teetop" className="logo me-1 logo-img-size" />
+     
       </Link>
       {isOpen ? (
         <FaTimes
