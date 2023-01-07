@@ -497,9 +497,8 @@ body {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.footerDiv {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		display: block;
+		
 		
 	}
 	.fontReduce {

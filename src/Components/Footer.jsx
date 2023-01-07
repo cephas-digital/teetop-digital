@@ -113,7 +113,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="d-none d-md-block">
+          <div className=" d-md-block">
             <h5>Contact Us</h5>
             <ul className="list-group border-0">
               {details.map((item, index) => (
