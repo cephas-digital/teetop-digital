@@ -1,11 +1,53 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "reactstrap";
-import { MiddleHeader } from "../../Utils";
+import { Buttons, MiddleHeader } from "../../Utils";
 import contactImg from "../../Assets/Contact-Us-(1).png";
 import { socials } from "../../Components/Footer";
 import contactImg2 from "../../Assets/Contact_Us.png";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 const ServicesManagement = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+	let init = {
+			fullname: "",
+			email: "",
+			telephone: "",
+			subject: "",
+			message: "",
+			header: "Get A Quote",
+		},
+		[stateData, setStateData] = useState(init);
+
+	let [loading, setLoading] = useState(false);
+
+	let handleSubmit = async e => {
+		e.preventDefault();
+		if (!stateData.fullname || !stateData.email || !stateData.message) {
+			return toast.warn("Please fill out your name, email and the message");
+		}
+		setLoading(true);
+		try {
+			let res = await axios.post("/api/v1/feedback", { ...stateData });
+			toast.success(res.data.msg, { autoClose: 5000 });
+			setLoading(false);
+			setStateData(init);
+		} catch (err) {
+			let error = err.response?.data?.error;
+			if (error) {
+				error.forEach(error => toast.error(error.msg));
+			}
+			setLoading(false);
+		}
+	};
+
+	let textChange =
+		name =>
+		({ target: { value } }) => {
+			setStateData({ ...stateData, [name]: value });
+		};
 	return (
 		<div className="aboutScreen">
 			<Container>
@@ -14,9 +56,19 @@ const ServicesManagement = () => {
 					<div
 						className="py-md-5 py-3 pt-0 d-flex flex-column"
 						data-aos="fade-right">
-							<h1 className="display-5">How can we help?</h1>
 						<p data-aos="zoom-in" data-aos-delay="1000" className="fontReduce">
-						We're here to help and answer any question you might have.<br/> we look forward to hearing from you.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sit
+							earum delectus omnis laboriosam quae ratione dolorem cumque
+							pariatur neque dignissimos aut odit incidunt, placeat officia
+							eaque quasi corporis et! Hic quo provident quaerat accusamus
+							soluta veniam quasi repellat minus itaque ratione, optio ex magnam
+							in dolores iure dicta. Ipsum inventore ducimus blanditiis quas
+							expedita repellendus! Consequatur sapiente laudantium optio,
+							expedita dolor obcaecati praesentium necessitatibus eos illo a
+							facere suscipit quisquam alias dolorem, sunt doloremque
+							dignissimos blanditiis iste, sit earum distinctio culpa architecto
+							voluptas. Sunt aliquid voluptate eos itaque repudiandae, eum est.
+							Repellendus molestias, est nemo dolorum iure dignissimos. Dolorum.
 						</p>
 						<ul className="list-group border-0 list-group-horizontal">
 							{socials.map((item, index) => (
@@ -55,6 +107,8 @@ const ServicesManagement = () => {
 								type="text"
 								className="form-control borderColor bg-transparent py-3"
 								placeholder="Name"
+								value={stateData?.fullname}
+								onChange={textChange("fullname")}
 							/>
 						</div>
 						<div className="col-md-6">
@@ -65,6 +119,8 @@ const ServicesManagement = () => {
 								type="email"
 								className="form-control borderColor bg-transparent py-3"
 								placeholder="Email"
+								value={stateData?.email}
+								onChange={textChange("email")}
 							/>
 						</div>
 						<div className="col-md-8">
@@ -78,12 +134,19 @@ const ServicesManagement = () => {
 								}}
 								className="form-control borderColor bg-transparent py-3"
 								placeholder="Message"
+								value={stateData?.message}
+								onChange={textChange("message")}
 							/>
 						</div>
 						<div className="col-md-6 col-8">
-							<button className="text-decoration-none btn btn-primary1 text-capitalize px-5 py-4 hug w-100">
-								Send
-							</button>
+							<Buttons
+								css={
+									"text-decoration-none btn btn-primary1 text-capitalize px-5 py-4 hug w-100"
+								}
+								title={"Send"}
+								loading={loading}
+								onClick={handleSubmit}
+							/>
 						</div>
 					</div>
 				</div>

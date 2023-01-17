@@ -4,9 +4,10 @@ import { useNavigate, Link } from "react-router-dom";
 import { Container } from "reactstrap";
 import { Buttons, EyeToggle } from "../Utils";
 import logo from "../Assets/teetop1 (2).png";
+import { toast } from "react-toastify";
 
 const Register = () => {
-	const { loginUser, auth } = useContext(GlobalState);
+	const { registerUser, auth } = useContext(GlobalState);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -15,35 +16,58 @@ const Register = () => {
 	let [typePass, setTypePass] = useState(false),
 		[typePass2, setTypePass2] = useState(false),
 		init = {
+			firstName: "",
+			lastName: "",
+			telephone: "",
 			email: "",
 			password: "",
+			confirmPassword: "",
 		},
-		[stateData, setStateData] = useState(init),
+		[state, setState] = useState(init),
 		[loading, setLoading] = useState(false),
 		[submit, setSubmit] = useState(false),
 		navigate = useNavigate(),
 		textChange =
 			name =>
 			({ target: { value } }) => {
-				setStateData({ ...stateData, [name]: value });
+				setState({ ...state, [name]: value });
 			};
 
 	let handleSubmit = async e => {
 		e.preventDefault();
-		if (!stateData?.password || !stateData?.email) return;
+		if (
+			!state?.password ||
+			!state?.email ||
+			!state?.firstName ||
+			!state?.lastName ||
+			!state?.telephone
+		)
+			return toast.info("Please fill out all fields");
+		if (state?.password !== state?.confirmPassword)
+			return toast.error("Password do not match");
+
+		if (
+			!/\d/.test(state?.password) ||
+			// eslint-disable-next-line no-useless-escape
+			!/[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(state?.password) ||
+			state?.password?.length < 8
+		)
+			return toast.error(
+				`Password must be at least 8 characters long, contains at least one number, one uppercase, one lowercase letter and one special character`
+			);
 		setLoading(true);
-		await loginUser(stateData);
+		await registerUser(state);
 		setLoading(false);
 		setSubmit(true);
 	};
 
 	useEffect(() => {
-		if (submit && auth?.isLoggedIn) {
+		if (submit && auth?.isRegistered) {
 			setSubmit(false);
-			navigate("/");
+			navigate("/activate");
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [submit, auth?.isLoggedIn]);
+	}, [submit, auth?.isRegistered]);
 	return (
 		<DefaultAuthComponent>
 			<>
@@ -59,7 +83,7 @@ const Register = () => {
 							required
 							name="firstName"
 							className="form-control py-3"
-							value={stateData.firstName}
+							value={state.firstName}
 							onChange={textChange("firstName")}
 						/>
 					</div>
@@ -70,7 +94,7 @@ const Register = () => {
 							required
 							name="lastName"
 							className="form-control py-3"
-							value={stateData.lastName}
+							value={state.lastName}
 							onChange={textChange("lastName")}
 						/>
 					</div>
@@ -81,7 +105,7 @@ const Register = () => {
 							required
 							name="email"
 							className="form-control py-3"
-							value={stateData.email}
+							value={state.email}
 							onChange={textChange("email")}
 						/>
 					</div>
@@ -92,7 +116,7 @@ const Register = () => {
 							required
 							name="telephone"
 							className="form-control py-3"
-							value={stateData.telephone}
+							value={state.telephone}
 							onChange={textChange("telephone")}
 						/>
 					</div>
@@ -103,7 +127,7 @@ const Register = () => {
 							required
 							name="password"
 							className="form-control py-3"
-							value={stateData.password}
+							value={state.password}
 							onChange={textChange("password")}
 						/>
 						<EyeToggle typePass={typePass} setTypePass={setTypePass} />
@@ -111,11 +135,11 @@ const Register = () => {
 					<div className="mb-5 show-hide2 show-hide position-relative">
 						<label htmlFor="ConfirmPassword">Confirm Password</label>
 						<input
-							type={typePass ? "text" : "password"}
+							type={typePass2 ? "text" : "password"}
 							required
 							name="confirmPassword"
 							className="form-control py-3"
-							value={stateData.confirmPassword}
+							value={state.confirmPassword}
 							onChange={textChange("confirmPassword")}
 						/>
 						<EyeToggle typePass={typePass2} setTypePass={setTypePass2} />
@@ -136,6 +160,13 @@ const Register = () => {
 							to={`/login`}
 							className="textColor ps-1 text-decoration-none fw-600">
 							Log in
+						</Link>{" "}
+					</p>
+					<p className="my-4 justify-content-end d-flex">
+						<Link
+							to={`/activate`}
+							className="text-decoration-none fw-600 text-dark">
+							Activate account here
 						</Link>{" "}
 					</p>
 				</form>
@@ -159,9 +190,9 @@ export const DefaultAuthComponent = ({ children }) => {
 					<span
 						to="/"
 						className="text-decoration-none text-dark d-flex align-items-center mb-4">
-						<img src={logo} alt="Honourworld" className="logo me-1 logo-img-size" />
+						<img src={logo} alt="kemtech" className="logo kemtech-logo me-1" />
 						{/* <div className="d-none d-md-block">
-							<p className="text-capitalize site-primary-color m-0">teetop</p>
+							<p className="text-capitalize site-primary-color m-0">Kemtech</p>
 							<p className="text-capitalize site-secondary-color m-0">Enterprises</p>
 						</div> */}
 					</span>
