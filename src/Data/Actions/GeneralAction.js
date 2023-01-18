@@ -425,6 +425,7 @@ export const generateVirtual = () => async dispatch => {
 			type: GENERATE_VIRTUAL,
 			payload: res?.data,
 		});
+		toast?.success(res?.data?.msg, { autoClose: 5000 });
 		dispatch(manageFundWallet());
 	} catch (err) {
 		if (err) console.log({ err });
