@@ -174,7 +174,7 @@ const Sidebar = () => {
 
 export default Sidebar;
 
-export const Header = () => {
+export const SideHeader = ({ noLogo }) => {
 	let location = useLocation(),
 		[isShadow, setIsShadow] = useState(null);
 
@@ -197,15 +197,16 @@ export const Header = () => {
 
 	return (
 		<Navbar
-			expand="lg"
+			expand="md"
 			sticky="top"
-			className={`container-fluid px-3 header bg-white headerScroll ${
-				isShadow ? "shadow" : ""
-			}`}
+			className={`container-fluid px-3 sidehead header bg-white
+			 headerScroll ${isShadow ? "shadow2 shadow" : ""} ${noLogo ? "d-md-none" : ""}`}
 			light>
-			<Link to="/">
-				<img src={logo} alt="Teetop Digital" className="logo" />
-			</Link>
+			{!noLogo && (
+				<Link to="/">
+					<img src={logo} alt="Teetop Digital" className="logo" />
+				</Link>
+			)}
 		</Navbar>
 	);
 };

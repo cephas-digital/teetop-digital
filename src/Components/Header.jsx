@@ -17,10 +17,7 @@ const Header = () => {
 
 	useEffect(() => {
 		document.title = CapitalizeFirst(
-			`Teetop Digital ${location.pathname
-				.split("/")
-				.join(" ")
-				.substring(1)}`
+			`Teetop Digital ${location.pathname.split("/").join(" ").substring(1)}`
 		);
 	}, [location.pathname]);
 
