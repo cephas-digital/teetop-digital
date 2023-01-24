@@ -321,7 +321,7 @@ const CustomerHeader = () => {
 					<p className="text-center w-50 w50 fontReduce">
 						Ever since i started business with Teetop digital it has been all
 						smiles...they have the best customer service team ever...prompt and
-						fast response to issues. Kemtech enterprises thanks for always being
+						fast response to issues. Teetop Digital thanks for always being
 						true.
 					</p>
 				</div>
